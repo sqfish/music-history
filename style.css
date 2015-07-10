@@ -1,0 +1,58 @@
+
+nav {
+   background-color: #FFB4B0;
+   border: 2px solid black;
+   margin: 7% 12% 15px 12%;
+   width: 90%
+/*   max-width: 800px;*/
+}
+
+li {
+   display: inline-block;
+   font-family: arial;
+   font-size: 1em;
+}
+
+.mid {
+   border-left: 2px solid black;
+   border-right: 2px solid black;
+   padding: 2px 5px 2px 5px;
+}
+
+.float-container {
+/*   width: 800px;*/
+   display: flex;
+}
+
+.left {
+   background-color: #4DD7FA;
+   border: 2px solid black;
+   width: 17%;
+/*   padding: 20px;*/
+   margin: 0 0 0 12%;
+   float: left;
+}
+
+.right {
+   background-color: #FEFAC0;
+   border: 2px solid black;
+   width: 55%;
+/*   padding: 20px;*/
+   margin: 0 12% 0 0;
+   float: right;
+}
+
+fieldset {
+   border: none;
+   width: 150px;
+   margin: 0px;
+   padding: 0px;
+}
+
+#left2 {
+   float: left;
+}
+
+#right2 {
+   float: right;
+}
