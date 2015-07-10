@@ -28,19 +28,21 @@ li {
    background-color: #4DD7FA;
    border: 2px solid black;
    width: 17%;
-/*   padding: 20px;*/
+   padding: 0.5%;
    margin: 0 0 0 12%;
    float: left;
+   min-height: 100%;
 }
 
 .right {
    background-color: #FEFAC0;
    border: 2px solid black;
-   width: 55%;
-/*   padding: 20px;*/
+   width: 53%;
+   padding: 0.5%;
    margin: 0 12% 0 0;
    float: right;
 }
+
 
 fieldset {
    border: none;
@@ -49,10 +51,26 @@ fieldset {
    padding: 0px;
 }
 
+select {
+   border: 2px solid black;
+}
+
+input {
+   border: 1px solid black;
+}
+
+input[type="checkbox"] {
+   
+}
+
 #left2 {
    float: left;
 }
 
 #right2 {
    float: right;
+}
+
+h3 {
+   color: #785616;
 }
