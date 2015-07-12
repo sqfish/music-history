@@ -3,77 +3,155 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Nashville Software School</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Nashville Software School</title>
+     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
 
 <body>
 
-     
-     
 
+<!-- 
+     Navigation bar and navigation links -->
 
-     
      <header>
-           <div class="container">
-             <nav>
-                <ul>
-                   <li>View Music</li>
-                   <li class="mid"><a href="#">Add Music</a></li>
-                   <li><a href="#">Profile</a></li>
-                </ul>
-             </nav>
-          </header>
-      
-        <div class="left">
-           <label for="song-length" value="Song length">Song length:</label><br>
-           <input type="range" id="song-length"></input><br>
-           <label for="artist">Artist:</label><br>
-           <select id="artist" name="artist">
-              <option selected disabled>Options</option>
-           </select>
-           <br><br>
-           <label for="album">Album:</label><br>
-           <select id="album" name="album">
-              <option selected disabled>Options</option>
-           </select>
-           <br><br>
-           
-           <fieldset>
-              <legend>Genre:</legend>
+        <nav>
+           <ul>
+              <li>View Music</li>
+              <li class="mid"><a href="#">Add Music</a></li>
+              <li><a href="#">Profile</a></li>
+           </ul>
+        </nav>
+     </header>
 
-              <div id="left2">
-                 <input type="checkbox" name="student" value="student" id="rock">
-                 <label for="rock"> Rock</label><br>
-                 <input type="checkbox" name="advanced" value="advanced" id="pop">
-                 <label for="pop"> Pop</label><br>
-                 <input type="checkbox" name="groundhog" value="whistlepig" id="blues">
-                 <label for="blues"> Blues</label>
-              </div>
+
+
+<!-- 
+
+     Main content
+
+     Parent flex container and left and right flex item children -->
+
+
+     <div class="flex-container">
+
+
+<!-- 
+
+     Left flex item 
+
+     Left flex item and filter input form elements -->
+
+          <div class="left-flex-item">
+
+
+               <form>
+
+
+               <!-- 
+                    Input form elements: slider and two select elements -->
+
+
+                    <div id="slider-and-selects">
+                         <label for="song-length" value="Song length">Song length:</label>
+                         <input type="range" id="song-length"></input>
+
+
+                         <label for="artist-name">Artist:</label>
+                         <select id="artist" name="artist-name">
+                              <option selected disabled>Options</option>
+                              <option></option>
+                              <option></option>
+                         </select>
+                     
+
+                         <label for="album-name">Album:</label>
+                         <select id="album" name="album-name">
+                              <option selected disabled>Options</option>
+                              <option></option>
+                              <option></option>
+                         </select>
+                    </div>
+
+
+
+               <!-- 
+                    Input form elements: checkboxes grouped for positioning -->
+
+                    <fieldset>
+                         <legend>Genre:</legend>
+
+
+                              <div id="left-checkboxes">
+                                   <ul>
+                                        <li>
+                                             <input type="checkbox" name="genre" value="rock" id="rock">
+                                             <label for="rock">Rock</label>
+                                        </li>
+                                        <li>
+                                             <input type="checkbox" name="genre" value="pop" id="pop">
+                                             <label for="pop">Pop</label>
+                                        </li>
+                                        <li>
+                                             <input type="checkbox" name="genre" value="blues" id="blues">
+                                             <label for="blues">Blues</label>
+                                        </li>
+                                   </ul>
+                              </div>
               
-              <div id="right2">
-                 <input type="checkbox" name="student" value="student" id="classical">
-                 <label for="classical"> Classical</label><br>
-                 <input type="checkbox" name="advanced" value="advanced" id="jazz">
-                 <label for="jazz"> Jazz</label><br>
-                 <input type="checkbox" name="groundhog" value="whistlepig" id="hiphop">
-                 <label for="hiphop">Hip Hop</label>
-              </div>
-           </fieldset><br>
-           <center><input type="submit" value="Filter"></input>
-        </div>
+
+                              <div id="right-checkboxes">
+                                   <ul> 
+                                        <li>
+                                             <input type="checkbox" name="genre" value="classical" id="classical">
+                                             <label for="classical"> Classical</label>
+                                        </li> 
+                                        <li>
+                                             <input type="checkbox" name="genre" value="jazz" id="jazz">
+                                             <label for="jazz"> Jazz</label>
+                                        </li>
+                                        <li>
+                                             <input type="checkbox" name="genre" value="hiphop" id="hiphop">
+                                             <label for="hiphop">Hip Hop</label>
+                                        </li>
+                                   </ul>
+                              </div>
+                    </fieldset>
+
+
+
+               <!-- 
+                    Form submit button -->
+
+                    <input type="submit" value="Filter"></input>
+               </form>
+          </div>
            
-        <div class="right">
-           <h3>Song Name</h3>
-           <p>Artist Name | Album Name | Genre</p>
-           <h3>Song Name</h3>
-           <p>Artist Name | Album Name | Genre</p>
-           <h3>Song Name</h3>
-           <p>Artist Name | Album Name | Genre</p>
-           <h3>Song Name</h3>
-           <p>Artist Name | Album Name | Genre</p>
-        </div>
+
+     <!-- 
+
+          Right flex item 
+
+          Right flex item and placeholder for song playlist -->
+        
+
+          <div class="right-flex-item">
+                <h3>Song Name</h3>
+                <p>Artist Name | Album Name | Genre</p>
+
+                <h3>Song Name</h3>
+                <p>Artist Name | Album Name | Genre</p>
+
+                <h3>Song Name</h3>
+                <p>Artist Name | Album Name | Genre</p>
+
+                <h3>Song Name</h3>
+                <p>Artist Name | Album Name | Genre</p>
+          </div>
+
+
      </div> 
 
 

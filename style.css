@@ -1,12 +1,23 @@
 
+/* 
+ *
+ * Navigation bar
+ *
+ */
+
+
 nav {
+   display: block;
+   width: 75%;
+   max-width: 920px;
+   min-width: 700px;
+   box-sizing: border-box;
    background-color: #FFB4B0;
    border: 2px solid black;
-   margin: 7% 0 15px 15%;
-   width: 80%;
+   margin: 5% auto 15px auto;
 }
 
-li {
+nav li {
    display: inline-block;
    font-family: arial;
    font-size: 1em;
@@ -18,95 +29,236 @@ li {
    padding: 2px 5px 2px 5px;
 }
 
-.container {
-/*   width: 800px;*/
+
+
+
+/* 
+ *
+ * Main content
+ *
+ * Parent flex container and flex items
+ * for layout of main content
+ *
+ */
+
+.flex-container {
    display: flex;
+   flex-flow: row nowrap;
+   width: 75%;
+   max-width: 920px;
+   min-width: 700px;
+   margin-left: auto;
+   margin-right: auto;
+   justify-content: space-between;
 }
 
-.left {
+.left-flex-item {
    background-color: #4DD7FA;
    border: 2px solid black;
-/*   width: 17%;*/
-   width:auto;
-   height: 500px;
-   padding: 0.5%;
-   margin: 0 auto 0 15%;
-   float: left;
-/*   min-height: 100%;*/
+   flex: 0 0 auto;
+   min-width: min-content;
+   padding: 1.5em 1.5em 1.5em 1.5em;
+   margin: 0 15px 0 0;
    font-family: arial;
+   font-size: 0.9em;
 }
 
-.right {
+.right-flex-item {
    background-color: #FEFAC0;
    border: 2px solid black;
-   width: 49%;
-   height: 500px;
-   padding: 0.5%;
-   margin: 0 15% 0 0;
-   /*display: inline-block;*/
-   float: right;
+   flex: 4 1 auto;
+   padding: 1.5em;
    font-family: arial;
 }
 
 
-fieldset {
-   border: none;
-   width: 150px;
-   margin: 0px;
-   padding: 0px;
-}
+
+/* 
+ *
+ * Content of left flex item
+ *
+ * Filter input form elements
+ *
+ */
+
+
+form label, fieldset > legend {
+   line-height: 200%;
+   width: 100%;
+ }
+
+ #slider-and-selects label {
+   display: block;
+ }
 
 input[type="range"] {
-   width: 70%;
+   width: 100%;
    max-width: 200px;
+   margin-bottom: 1.2em;
 }
 
 select {
    border: 2px solid black;
-   width: 70%;
+   width: 100%;
    max-width: 200px;
-   font-size: 0.8em;
-/*   margin: 0 0 0 15px;*/
-}
-
-input[type="submit"] {
-   border: 2px solid black;
-   border-radius: 5px;
+   font-size: 0.9em;
    font-family: arial;
-   font-size: 1em;
-   letter-spacing: 0.05em;
-   font-weight: bold;
-   width: 50%;
-   max-width: 100px;
+   margin-bottom: 2em;
 }
 
+fieldset {
+   border: none;
+   width: 170px;
+   margin: 0;
+   padding: 0;
+}
 
-#left2 {
+fieldset ul {
+   margin: 0;
+   padding: 0;
+}
+
+fieldset li {
+   font-size: 0.9em;
+   margin-bottom: 1.2em;
+   list-style-type: none;
+}
+
+input[type="checkbox"] {
+   box-shadow: 0 0 0 2px white inset;
+   outline: 2px solid black;
+}
+
+#left-checkboxes {
    float: left;
 }
 
-#right2 {
+#right-checkboxes {
    float: right;
+}
+
+input[type="submit"] {
+   clear: both;
+   display: block;
+   width: 65%;
+   max-width: 100px;
+   border: 2px solid black;
+   border-radius: 5px;
+   background-color: #EEE;
+   font-family: arial;
+   font-size: 1em;
+   letter-spacing: .1em;
+   font-weight: bold;
+   margin-top: 1em;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+
+/* 
+ *
+ * Content of right flex item
+ *
+ * Song playlist elements
+ *
+ */
+
+
+.right-flex-item p {
+   margin: 0;
+   padding-bottom: 1.8em;
 }
 
 h3 {
    color: #785616;
+   font-family: arial;
+   font-size: 1.7em;
+   font-weight: 500;
+   margin: 0;
 }
 
-/*@media screen and (max-width: 900px) {
-   .right {
-/*      margin: 0 10% 0 0;*/
-      margin:auto;
-      /*width:auto;*/
-   }
 
-   .left {
-/*      margin: 0 0 0 10%;*/
-      width: auto;
-   /*   margin: auto;*/
-   }
+
+/* 
+ *
+ * Breakpoint
+ *
+ * Display flex items as a column in smaller width devices
+ *
+ */
+
+
+
+
+@media screen and (max-width: 700px) {
 
    nav {
-      margin: 7% 15% 15px 15%;
+      width: 95%;
+      max-width: 700px;
+      min-width: 200px;
+      box-sizing: border-box;
+      margin-top: 5%;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
    }
-}*/
+
+   .flex-container {
+      display: flex;
+      flex-flow: column wrap;
+      width: 95%;
+      max-width: 700px;
+      min-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .left-flex-item {
+      margin: 0 0 15px 0;
+      flex: 0 1 auto;
+      width: 100%;
+      text-align: center;
+      padding: 1.5em 1.5em 1.5em 1.5em;
+      box-sizing: border-box;
+   }
+
+   .right-flex-item {
+      flex: 3 1 main-size;
+      width: 100%;
+      padding: 1.5em;
+      margin: 0;
+      font-family: arial;
+      box-sizing: border-box;
+   }
+
+   #slider-and-selects {
+      display: inline-block;
+      padding-right: 5%;
+      width: 40%;
+      min-width: 100px;
+      max-width: 180px;
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto; 
+   }
+
+   #slider-and-selects label {
+      display: block;
+   }
+
+   fieldset {
+      display: inline-block;
+      padding-left: 5%;
+      vertical-align: top;
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      clear: none;
+   }
+
+
+
+}
+
+
+
