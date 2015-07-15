@@ -52,7 +52,7 @@ nav li {
    justify-content: space-between;
 }
 
-.left-flex-item {
+#left-flex-item {
    background-color: #4DD7FA;
    border: 2px solid black;
    flex: 0 0 auto;
@@ -63,7 +63,7 @@ nav li {
    font-size: 0.9em;
 }
 
-.right-flex-item {
+#right-flex-item {
    background-color: #FEFAC0;
    border: 2px solid black;
    flex: 4 1 auto;
@@ -120,7 +120,7 @@ fieldset ul {
 
 fieldset li {
    font-size: 0.9em;
-   margin-bottom: 1.2em;
+   margin-bottom: 0.5em;
    list-style-type: none;
 }
 
@@ -164,7 +164,7 @@ input[type="submit"] {
  */
 
 
-.right-flex-item p {
+#right-flex-item p {
    margin: 0;
    padding-bottom: 1.8em;
 }
@@ -213,7 +213,7 @@ h3 {
       margin-right: auto;
    }
 
-   .left-flex-item {
+   #left-flex-item {
       margin: 0 0 15px 0;
       flex: 0 1 auto;
       width: 100%;
@@ -222,7 +222,7 @@ h3 {
       box-sizing: border-box;
    }
 
-   .right-flex-item {
+   #right-flex-item {
       flex: 3 1 main-size;
       width: 100%;
       padding: 1.5em;
