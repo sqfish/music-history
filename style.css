@@ -8,22 +8,35 @@
 
 nav {
    display: block;
-   width: 75%;
+   width: 75vw;
    max-width: 920px;
-   min-width: 700px;
+   min-width: 660px;
    box-sizing: border-box;
    background-color: #FFB4B0;
    border: 2px solid black;
-   margin: 5% auto 15px auto;
+   margin: 7vh auto 15px auto;
 }
 
 nav li {
    display: inline-block;
-   font-family: arial;
-   font-size: 1em;
+   box-sizing: content-box;
+   padding: 4px;
+   font-family: verdana;
+   font-size: 1rem;
+   opacity: 0.7;
 }
 
-.mid {
+nav li a {
+   text-decoration: none;
+}
+
+.current-selection {
+   font-weight: bolder;
+   background-color: #FFB4B0;
+   opacity: 1;
+}
+
+.middle {
    border-left: 2px solid black;
    border-right: 2px solid black;
    padding: 2px 5px 2px 5px;
@@ -44,12 +57,12 @@ nav li {
 .flex-container {
    display: flex;
    flex-flow: row nowrap;
-   width: 75%;
+   width: 75vw;
    max-width: 920px;
-   min-width: 700px;
+   min-width: 660px;
    margin-left: auto;
    margin-right: auto;
-   justify-content: space-between;
+   justify-content: center;
 }
 
 #left-flex-item {
@@ -108,20 +121,37 @@ select {
 
 fieldset {
    border: none;
-   width: 170px;
+   width: 180px;
+   /*min-width: 160px;*/
    margin: 0;
    padding: 0;
 }
 
+#flexbox {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   width: 100%;  
+   display: flex;
+   flex-flow: row wrap
+   justify-content: center;
+}
+
 fieldset ul {
+   /*max-width: min-content;*/
+   /*display: inline;*/
    margin: 0;
    padding: 0;
 }
 
 fieldset li {
+   display: block;
+   max-width: min-content;
+   min-width: 30px;
    font-size: 0.9em;
    margin-bottom: 0.5em;
    list-style-type: none;
+
 }
 
 input[type="checkbox"] {
@@ -130,11 +160,13 @@ input[type="checkbox"] {
 }
 
 #left-checkboxes {
-   float: left;
+   /*float: left;*/
+   flex: 1;
 }
 
 #right-checkboxes {
-   float: right;
+   /*float: right;*/
+   flex: 1;
 }
 
 input[type="submit"] {
@@ -166,7 +198,7 @@ input[type="submit"] {
 
 #right-flex-item p {
    margin: 0;
-   padding-bottom: 1.8em;
+   padding-bottom: 0.7em;
 }
 
 h3 {
@@ -177,6 +209,26 @@ h3 {
    margin: 0;
 }
 
+#right-flex-item p {
+   
+}
+
+#right-flex-item div {
+   padding: 2%;
+}
+
+#right-flex-item div:nth-child(2n+0) {
+   background-color: #FFF5EE;
+}
+
+#right-flex-item div:nth-child(2n+1) {
+   background-color: #F5FFFA;
+}
+
+#right-flex-item div:nth-child(1) {
+   background-color: #E7F0FA;
+   font-weight: bolder;
+}
 
 
 /* 
@@ -193,8 +245,8 @@ h3 {
 @media screen and (max-width: 700px) {
 
    nav {
-      width: 95%;
-      max-width: 700px;
+      width: 90vw;
+      max-width: 660px;
       min-width: 200px;
       box-sizing: border-box;
       margin-top: 5%;
@@ -206,8 +258,8 @@ h3 {
    .flex-container {
       display: flex;
       flex-flow: column wrap;
-      width: 95%;
-      max-width: 700px;
+      width: 90vw;
+      max-width: 660px;
       min-width: 200px;
       margin-left: auto;
       margin-right: auto;
@@ -218,7 +270,7 @@ h3 {
       flex: 0 1 auto;
       width: 100%;
       text-align: center;
-      padding: 1.5em 1.5em 1.5em 1.5em;
+      padding: 3vh 1.5vh;
       box-sizing: border-box;
    }
 
@@ -234,12 +286,12 @@ h3 {
    #slider-and-selects {
       display: inline-block;
       padding-right: 5%;
-      width: 40%;
+      width: 40vw;
       min-width: 100px;
-      max-width: 180px;
+      /*max-width: 180px;*/
       text-align: left;
-      margin-left: auto;
-      margin-right: auto; 
+      /*margin-left: auto;
+      margin-right: auto; */
    }
 
    #slider-and-selects label {
@@ -248,12 +300,13 @@ h3 {
 
    fieldset {
       display: inline-block;
-      padding-left: 5%;
+      width: 35vw;
+      min-width: 160px;
+      /*padding-left: 5%;*/
       vertical-align: top;
       text-align: left;
       margin-left: auto;
       margin-right: auto;
-      clear: none;
    }
 
 

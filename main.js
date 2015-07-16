@@ -2,7 +2,7 @@ var songs = [];
 
 
 // Song object container
-function song(title, artist, album) {
+function Song(title, artist, album) {
 	this.songName = title;
 	this.artistName = artist;
 	this.albumName = album;
@@ -52,7 +52,7 @@ function parseSongInfo(currentValue) {
 	var artistName = currentValue.slice(x, y);
 	y = y + query.length;
 	var albumName = currentValue.slice(y);
-	return new song(songName, artistName, albumName);
+	return new Song(songName, artistName, albumName);
 }
 
 
