@@ -2,6 +2,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,12 @@
 <body>
 
 
-
-<!-- 
+  <!-- 
     HEADER AND NAVIGATION
     Navigation bar and navigation links -->
 
   <header>
-    
+
     <nav>
       <ul>
         <li class="current-selection">View Music</li>
@@ -30,8 +30,7 @@
   </header>
 
 
-
-<!-- 
+  <!-- 
 
     MAIN CONTENT
     Parent flex container and left and right flex item children -->
@@ -40,7 +39,7 @@
   <div class="flex-container">
 
 
-<!-- 
+    <!-- 
 
     LEFT SIDEBAR
     Left flex item parent with filter input form elements -->
@@ -51,7 +50,7 @@
       <form>
 
 
-      <!-- 
+        <!-- 
           INPUT FORM ELEMENTS
           slider and two select elements -->
 
@@ -67,7 +66,7 @@
             <option>Artist</option>
             <option>Artist</option>
           </select>
-      
+
 
           <label for="album-name">Album:</label>
           <select id="album" name="album-name">
@@ -78,8 +77,7 @@
         </div>
 
 
-
-      <!-- 
+        <!-- 
           INPUT FORM ELEMENTS
           checkboxes grouped for positioning -->
 
@@ -103,14 +101,14 @@
                 </li>
               </ul>
             </div>
-    
+
 
             <div id="right-checkboxes">
-              <ul> 
+              <ul>
                 <li>
                   <input type="checkbox" name="genre" value="classical" id="classical">
                   <label for="classical"> Classical</label>
-                </li> 
+                </li>
                 <li>
                   <input type="checkbox" name="genre" value="jazz" id="jazz">
                   <label for="jazz"> Jazz</label>
@@ -126,20 +124,19 @@
         </fieldset>
 
 
-
-      <!-- 
+        <!-- 
           FORM SUBMIT -->
 
-      <input type="submit" value="Filter">
+        <input type="submit" value="Filter">
       </form>
     </div>
-        
+
 
     <!-- 
 
        CONTENT
        Right flex item and placeholder for song playlist -->
-      
+
 
     <div id="right-flex-item">
 
@@ -165,10 +162,11 @@
     </div>
 
 
-  </div> 
+  </div>
 
 
   <script type="text/javascript" src="main.js"></script>
 
 </body>
+
 </html>

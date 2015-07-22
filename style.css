@@ -1,45 +1,63 @@
-
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 /* 
  *
  * Navigation bar
  *
  */
 
+header {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
 
 nav {
-   display: block;
-   width: 75vw;
-   max-width: 920px;
-   min-width: 660px;
-   box-sizing: border-box;
-   background-color: #FFB4B0;
-   border: 2px solid black;
-   margin: 7vh auto 15px auto;
+  display: block;
+  width: 75vw;
+  max-width: 920px;
+  min-width: 660px;
+  box-sizing: border-box;
+  background-color: #FFB4B0;
+  border: 2px solid black;
+  /*margin: 7vh auto 15px auto;*/
+  margin: 35px auto 0 auto;
+
+  /*position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;*/
 }
 
 nav li {
-   display: inline-block;
-   box-sizing: content-box;
-   padding: 4px;
-   font-family: verdana;
-   font-size: 1rem;
-   opacity: 0.7;
+  display: inline-block;
+  box-sizing: content-box;
+  padding: 4px;
+  font-family: verdana;
+  font-size: 1rem;
+  opacity: 0.7;
 }
 
 nav li a {
-   text-decoration: none;
+  text-decoration: none;
 }
 
 .current-selection {
-   font-weight: bolder;
-   background-color: #FFB4B0;
-   opacity: 1;
+  font-weight: bolder;
+  background-color: #FFB4B0;
+  opacity: 1;
 }
 
 .middle {
-   border-left: 2px solid black;
-   border-right: 2px solid black;
-   padding: 2px 5px 2px 5px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding: 2px 5px 2px 5px;
 }
 
 
@@ -55,33 +73,40 @@ nav li a {
  */
 
 .flex-container {
-   display: flex;
-   flex-flow: row nowrap;
-   width: 75vw;
-   max-width: 920px;
-   min-width: 660px;
-   margin-left: auto;
-   margin-right: auto;
-   justify-content: center;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 75vw;
+  max-width: 920px;
+  min-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+  /*position: absolute;*/
+  position: static;  
+  margin-top: 110px;
+  left: 0;
+  right: 0;
+  overflow: auto;
 }
 
 #left-flex-item {
-   background-color: #4DD7FA;
-   border: 2px solid black;
-   flex: 0 0 auto;
-   min-width: min-content;
-   padding: 1.5em 1.5em 1.5em 1.5em;
-   margin: 0 15px 0 0;
-   font-family: arial;
-   font-size: 0.9em;
+  background-color: #4DD7FA;
+  border: 2px solid black;
+  flex: 0 0 auto;
+  min-width: min-content;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  margin: 0 15px 0 0;
+  font-family: arial;
+  font-size: 0.9em;
 }
 
 #right-flex-item {
-   background-color: #FEFAC0;
-   border: 2px solid black;
-   flex: 4 1 auto;
-   padding: 1.5em;
-   font-family: arial;
+  background-color: #FEFAC0;
+  border: 2px solid black;
+  flex: 4 1 auto;
+  padding: 1.5em;
+  font-family: arial;
 }
 
 
@@ -96,94 +121,94 @@ nav li a {
 
 
 form label, fieldset > legend {
-   line-height: 200%;
-   width: 100%;
+  line-height: 200%;
+  width: 100%;
  }
 
  #slider-and-selects label {
-   display: block;
+  display: block;
  }
 
 input[type="range"] {
-   width: 100%;
-   max-width: 200px;
-   margin-bottom: 1.2em;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 1.2em;
 }
 
 select {
-   border: 2px solid black;
-   width: 100%;
-   max-width: 200px;
-   font-size: 0.9em;
-   font-family: arial;
-   margin-bottom: 2em;
+  border: 2px solid black;
+  width: 100%;
+  max-width: 200px;
+  font-size: 0.9em;
+  font-family: arial;
+  margin-bottom: 2em;
 }
 
 fieldset {
-   border: none;
-   width: 180px;
-   /*min-width: 160px;*/
-   margin: 0;
-   padding: 0;
+  border: none;
+  width: 180px;
+  /*min-width: 160px;*/
+  margin: 0;
+  padding: 0;
 }
 
 #flexbox {
-   padding: 0;
-   margin: 0;
-   list-style: none;
-   width: 100%;  
-   display: flex;
-   flex-flow: row wrap
-   justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;  
+  display: flex;
+  flex-flow: row wrap
+  justify-content: center;
 }
 
 fieldset ul {
-   /*max-width: min-content;*/
-   /*display: inline;*/
-   margin: 0;
-   padding: 0;
+  /*max-width: min-content;*/
+  /*display: inline;*/
+  margin: 0;
+  padding: 0;
 }
 
 fieldset li {
-   display: block;
-   max-width: min-content;
-   min-width: 30px;
-   font-size: 0.9em;
-   margin-bottom: 0.5em;
-   list-style-type: none;
+  display: block;
+  max-width: min-content;
+  min-width: 30px;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  list-style-type: none;
 
 }
 
 input[type="checkbox"] {
-   box-shadow: 0 0 0 2px white inset;
-   outline: 2px solid black;
+  box-shadow: 0 0 0 2px white inset;
+  outline: 2px solid black;
 }
 
 #left-checkboxes {
-   /*float: left;*/
-   flex: 1;
+  /*float: left;*/
+  flex: 1;
 }
 
 #right-checkboxes {
-   /*float: right;*/
-   flex: 1;
+  /*float: right;*/
+  flex: 1;
 }
 
 input[type="submit"] {
-   clear: both;
-   display: block;
-   width: 65%;
-   max-width: 100px;
-   border: 2px solid black;
-   border-radius: 5px;
-   background-color: #EEE;
-   font-family: arial;
-   font-size: 1em;
-   letter-spacing: .1em;
-   font-weight: bold;
-   margin-top: 1em;
-   margin-right: auto;
-   margin-left: auto;
+  clear: both;
+  display: block;
+  width: 65%;
+  max-width: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #EEE;
+  font-family: arial;
+  font-size: 1em;
+  letter-spacing: .1em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
@@ -197,37 +222,37 @@ input[type="submit"] {
 
 
 #right-flex-item p {
-   margin: 0;
-   padding-bottom: 0.7em;
+  margin: 0;
+  padding-bottom: 0.7em;
 }
 
 h3 {
-   color: #785616;
-   font-family: arial;
-   font-size: 1.7em;
-   font-weight: 500;
-   margin: 0;
+  color: #785616;
+  font-family: arial;
+  font-size: 1.7em;
+  font-weight: 500;
+  margin: 0;
 }
 
 #right-flex-item p {
-   
+  
 }
 
 #right-flex-item div {
-   padding: 2%;
+  padding: 2%;
 }
 
 #right-flex-item div:nth-child(2n+0) {
-   background-color: #FFF5EE;
+  background-color: #FFF5EE;
 }
 
 #right-flex-item div:nth-child(2n+1) {
-   background-color: #F5FFFA;
+  background-color: #F5FFFA;
 }
 
 #right-flex-item div:nth-child(1) {
-   background-color: #E7F0FA;
-   font-weight: bolder;
+  background-color: #E7F0FA;
+  font-weight: bolder;
 }
 
 
@@ -244,70 +269,70 @@ h3 {
 
 @media screen and (max-width: 700px) {
 
-   nav {
-      width: 90vw;
-      max-width: 660px;
-      min-width: 200px;
-      box-sizing: border-box;
-      margin-top: 5%;
-      margin-bottom: 15px;
-      margin-left: auto;
-      margin-right: auto;
-   }
+  nav {
+    width: 90vw;
+    max-width: 660px;
+    min-width: 200px;
+    box-sizing: border-box;
+    margin-top: 5%;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-   .flex-container {
-      display: flex;
-      flex-flow: column wrap;
-      width: 90vw;
-      max-width: 660px;
-      min-width: 200px;
-      margin-left: auto;
-      margin-right: auto;
-   }
+  .flex-container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 90vw;
+    max-width: 660px;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-   #left-flex-item {
-      margin: 0 0 15px 0;
-      flex: 0 1 auto;
-      width: 100%;
-      text-align: center;
-      padding: 3vh 1.5vh;
-      box-sizing: border-box;
-   }
+  #left-flex-item {
+    margin: 0 0 15px 0;
+    flex: 0 1 auto;
+    width: 100%;
+    text-align: center;
+    padding: 3vh 1.5vh;
+    box-sizing: border-box;
+  }
 
-   #right-flex-item {
-      flex: 3 1 main-size;
-      width: 100%;
-      padding: 1.5em;
-      margin: 0;
-      font-family: arial;
-      box-sizing: border-box;
-   }
+  #right-flex-item {
+    flex: 3 1 main-size;
+    width: 100%;
+    padding: 1.5em;
+    margin: 0;
+    font-family: arial;
+    box-sizing: border-box;
+  }
 
-   #slider-and-selects {
-      display: inline-block;
-      padding-right: 5%;
-      width: 40vw;
-      min-width: 100px;
-      /*max-width: 180px;*/
-      text-align: left;
-      /*margin-left: auto;
-      margin-right: auto; */
-   }
+  #slider-and-selects {
+    display: inline-block;
+    padding-right: 5%;
+    width: 40vw;
+    min-width: 100px;
+    /*max-width: 180px;*/
+    text-align: left;
+    /*margin-left: auto;
+    margin-right: auto; */
+  }
 
-   #slider-and-selects label {
-      display: block;
-   }
+  #slider-and-selects label {
+    display: block;
+  }
 
-   fieldset {
-      display: inline-block;
-      width: 35vw;
-      min-width: 160px;
-      /*padding-left: 5%;*/
-      vertical-align: top;
-      text-align: left;
-      margin-left: auto;
-      margin-right: auto;
-   }
+  fieldset {
+    display: inline-block;
+    width: 35vw;
+    min-width: 160px;
+    /*padding-left: 5%;*/
+    vertical-align: top;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 
 
