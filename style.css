@@ -255,6 +255,24 @@ h3 {
   font-weight: bolder;
 }
 
+button {
+  display: block;
+  max-width: 100px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: #EEE;
+  font-family: arial;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin: 0 0 0 auto;
+  /*margin-left: auto;*/
+}
+
+#moreButton {
+  margin-top: 1em;
+  border: 2px solid black;
+  font-size: 0.9em;
+}
 
 /* 
  *

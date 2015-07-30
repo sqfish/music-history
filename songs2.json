@@ -1,39 +1,24 @@
 { 
   "songs": [
     {
-      "songName": "The Song That Never Ends!!!",
-      "artistName": "Lamb Chop",
-      "albumName": "Sing-Along, Play-Along"
-    },
-    {
-      "songName": "Legs!!!",
+      "songName": "Legs",
       "artistName": "ZZ Top",
       "albumName": "Eliminator"
     },
     {
-      "songName": "The Logical Song!",
+      "songName": "The Logical Song",
       "artistName": "Supertramp",
       "albumName": "Breakfast in America"
     },
     {
-      "songName": "Another Brick in the Wall!",
+      "songName": "Another Brick in the Wall",
       "artistName": "Pink Floyd",
       "albumName": "The Wall"
     },
     {
-      "songName": "Welcome to the Jungle!",
+      "songName": "Welcome to the Jungle",
       "artistName": "Guns & Roses",
       "albumName": "Appetite for Destruction"
-    },
-    {
-      "songName": "Ironic!",
-      "artistName": "Alanis Morisette",
-      "albumName": "Jagged Little Pill"
-    },
-    {
-      "songName": "Do Your Ears Hang Low?!",
-      "artistName": "Unknown",
-      "albumName": "Unknown"
     }
   ]
 }
