@@ -6,21 +6,15 @@ $(document).ready(function(){
     var songArray = data.songs;
     displaySongData(songArray);
   });
-})
+});
 
 function displaySongData (songArray) {
   var playlistHTML = document.getElementById("right-flex-item");
   playlistHTML.innerHTML = "";
   for (var i = 0; i < songArray.length; i++) {
     var song = songArray[i];
-    
-    // var childrenCount = playlistHTML.children.length;
-    // if (i < childrenCount) {
-    //   updatePlaylist(song, i);
-    // } else {
-      var newSong = createNewSongElement(song)
-      playlistHTML.appendChild(newSong);
-    // }
+    var newSong = createNewSongElement(song)
+    playlistHTML.appendChild(newSong);
   }
   displayMoreButton(playlistHTML);
 };
