@@ -267,6 +267,10 @@ button {
   /*margin-left: auto;*/
 }
 
+:focus {
+  outline: none;
+}
+
 #moreButton {
   margin-top: 1em;
   border: 2px solid black;

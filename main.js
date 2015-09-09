@@ -1,12 +1,23 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  $.ajax({
-    url: "songs.json"
-  }).done(function(data) {
-    var songArray = data.songs;
-    displaySongData(songArray);
-  });
-});
+//   $.ajax({
+//     url: "songs.json"
+//   }).done(function(data) {
+//     var songArray = data.songs;
+//     displaySongData(songArray);
+//   });
+// });
+
+// Alternative to AJAX request above //
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function(){
+  if(xhr.readyState === 4 && xhr.status === 200) {
+    var data = JSON.parse(xhr.responseText);
+    displaySongData(data.songs);
+  }
+};
+xhr.open("GET", 'songs.json');
+xhr.send();
 
 function displaySongData (songArray) {
   var playlistHTML = document.getElementById("right-flex-item");
@@ -56,7 +67,7 @@ $(document).on("click", "#moreButton", function(){
   });
 });
 
-$(document).on("click", "#deleteButton", function(){
+$(document).on("click", "#deleteButton", function(e){
   $("#deleteButton").parent().remove();
 });
 
